@@ -43,7 +43,7 @@ const register = async (req, res, next) => {
     }
 
     const studentSaved = await newStudent.save()
-    copyFile(studentSaved.imagen)
+
     return res.status(201).json(studentSaved)
   } catch (error) {
     return res.status(400).json('No se ha podido registrar a este alumno')

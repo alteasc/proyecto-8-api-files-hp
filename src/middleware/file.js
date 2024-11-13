@@ -19,5 +19,14 @@ const storage = new CloudinaryStorage({
   }
 })
 
+const storageReUse = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'HogwartsCopy',
+    allowedFormats: ['jpg', 'png', 'jpeg', 'gif']
+  }
+})
 const upload = multer({ storage })
+const uploadReUse = multer({ storage: storageReUse })
+
 module.exports = upload

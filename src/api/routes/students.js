@@ -1,4 +1,5 @@
 const { isPrefecto, isAuth } = require('../../middleware/auth')
+const uploadReUse = require('../../middleware/file')
 const upload = require('../../middleware/file')
 const {
   getStudents,
